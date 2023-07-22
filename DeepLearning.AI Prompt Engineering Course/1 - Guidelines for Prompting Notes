@@ -1,0 +1,24 @@
+# Guidelines for Prompting
+
+# Principle 1: Write clear and specific instructions
+
+- Clear != short
+- Use delimiters (triple quotes, triple backticks, tripe dashes, angle brackets, XML tags [<tag> </tag>])
+    - Using delimiters also helps to avoid prompt injections, which is when a user may give conflicting instructions to the model, the model won’t be confused if it’s within the delimiters with the actual instructions outside of it
+- Ask for structured output (like HTML or JSON)
+- Ask the model to check whether conditions are satisfied, check assumptions required to do the task
+    - E.g., “You will be provided with text. If the text contains a sequence instructions, re-write them in the following given format, if not, write “No instructions provided.” “
+- Few-shot prompting: provide examples of successful executions of the task you want performed before asking the model to complete the task itself
+
+# Principle 2: Give the model time to think
+
+- Request the model give a chain or series of relevant reasoning to get to the answer (basically ask the model to spend more time on the problem, which will make it devote more computational power, which will reduce the likelihood of a guess that would be incorrect)
+- Specify the steps to complete a task
+    - Example: “Your text if to perform the following actions: 1. Summarize the following text delimited by <> with 1 sentence. 2. Translate the summary into French. 3. List each name in the French summary. 4. Output a json object that contains the following keys: french_summary, num_names. Use the following format for your answer: Text: <text to summarize> Summary: <summary> Translation: <summary translation> Names: <list of names in French summary> Output JSON: <json with summary and num_names> Text: <{text}>
+- Instruct the model to work out its own solution before rushing to a conclusion
+
+# Model limitations:
+
+- Doesn’t know the limits of its own knowledge, and hasn’t perfectly memorized all the data it’s been trained on
+- May make up things that sound plausible but are not true (called “hallucinations”)
+    - Reduce hallucinations: Ask the model to first find relevant information, then answer the question based on the relevant information
