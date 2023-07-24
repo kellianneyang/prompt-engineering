@@ -1,0 +1,30 @@
+# Iterative Prompt Development
+
+Cycle:
+- Idea ->
+- Implementation (Prompt) ->
+- Experimental Result ->
+- Error Analysis ->
+- Repeat
+
+Guidelines:
+- Try something (be clear and specific)
+- Analyze why result does not give desired output
+- Clarify instructions, give more time to think
+- Refine the idea and the prompt
+- Try the prompt with a batch of examples
+- Repeat
+
+Length of response:
+- If giving the instruction to output a certain length, check the length of the response (LLMs don't always follow instructions exactly).
+- Can try various ways to limit length:
+    - "Use at most 50 words."
+    - "Use 3 sentences."
+    - "Use at most 280 characters."
+- Because LLMs use tokenizers, they don't always get lengths correct
+
+Consider prompt modifications like:
+- Length of response
+- Audience (change tone or details to use based on who will use the output)
+- Specify details you want it to always include
+- The format the output should take (HTML, JSON; check that the output is correct in its format)
