@@ -1,0 +1,16 @@
+# Chatbots
+
+LLMs allow you to build a custom chatbot with only a modest amount of effort
+
+So far...
+- We've just used one user message (your instructions) to generate one assistant message (ChatGPT's response/output)
+- Now we can take advantage of the turn-taking functionality of ChatGPT to get multiple user and assistant messages in one interaction
+
+Messages
+- System: sets the behavior of the assistant (i.e., high-level instructions for assistant); the user may not be aware of the system message
+- Assistant: chat model
+- User: you
+
+Conversations
+- Every conversation is self-contained, so you have to pass all the messages to the model every time you want a new output
+- Make sure to instruct the model to format the final output in accordance to your specifications if you need to save the information or send it out to another system/person

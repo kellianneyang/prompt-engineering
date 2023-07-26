@@ -1,0 +1,28 @@
+# Inferring
+
+General use
+- Model takes input and performs some type of analysis
+- Extracting labels, names, understanding sentiment, etc.
+
+Sentiment
+- Can ask to categorize as "positive", "negative"
+- Can ask to list (a certain number of) emotions from the text
+- Can ask if text (writer of text) is expressing a certain emotion (e.g., anger)
+
+Information Extraction
+- Can ask to extract specific information (e.g., item purchased, company name)
+
+Can combine many inference questions in one prompt
+- Tell model how to format its response
+
+Topic Inference
+- "What is the topic of this text?"
+- "Determine # topics that are being discussed in the following text"
+- "Make each item one or two words long"
+- "Format as a list with commas"
+- "Determine whether each item in the following list of topics is a topic in the text"
+- Check that it adhered to your instructions on how many topics to extract
+    - response.split(sep = ',')
+    
+Zero-shot learning prompt
+- Prompt without any training data/examples for the model to learn from/follow

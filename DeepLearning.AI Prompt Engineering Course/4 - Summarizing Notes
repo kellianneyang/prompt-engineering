@@ -1,0 +1,6 @@
+# Summarizing
+
+Can **summarize** or **extract** information, based on need
+- Summary will compress text into smaller size
+    - Can change focus of summary by modifying prompt
+- Extraction will only output relevant info

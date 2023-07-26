@@ -1,0 +1,14 @@
+# Transforming
+
+Transforming examples
+- Languages (translating, identifying language of text)
+- Editing (spelling, grammar)
+    - "Proofread and correct this text"
+- Formats (e.g., HTML input, JSON output; markdown)
+- Registers/formality ("translate into the formal and informal form")
+- Tone transformation
+    - "Translate the following from slang to a business letter"
+    
+Can get difference between original and modified with redlines
+    - from redlines import Redlines
+    - diff = Redlines(text, response)
